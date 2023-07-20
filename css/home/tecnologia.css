@@ -1,0 +1,80 @@
+.tecnologia-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0);
+  /*box-shadow: inset 0 80px var(--cor-0); faz com que crie a impressão que a imagem está vazando do container, os 80px ali definidos é a altura q a foto vaza pra cima +80 e pra baixo -80*/
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tecnologia-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit: cover; não deixa que a foto perca a formatação ao ser diminuída*/
+  object-position: left;
+  /*  object-position: left; faz com que a foto se mantenha intacta a esquerda e comece a ser cortadad da direita*/
+}
+.tecnologia-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.tecnologia-conteudo > span {
+  display: block;
+  margin-bottom: 20px;
+}
+.tecnologia-conteudo h2 {
+  margin-bottom: 32px;
+}
+.tecnologia-conteudo > p {
+  margin-bottom: 20px;
+}
+
+.tecnologia a {
+  margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+  display: flex;
+  gap: 40px;
+}
+.tecnologia-vantagens h3 {
+  margin-bottom: 8px;
+  width: max-content;
+  /*  width: max-content; não permite que quebra o titulo fazendo com que o conteudo do item fique sempre do tamanho do titulo sem que ele quebre.*/
+}
+.tecnologia-vantagens img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .tecnologia-bg {
+    box-shadow: initial;
+    /*box-shadow: initial; retira todo o conteúdo de box shadow colocado no inicio para criar o efeito de bordas da imagem vazando o container*/
+  }
+  .tecnologia {
+    grid-template-columns: 1fr;
+  }
+  .tecnologia-conteudo {
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .tecnologia-imagem {
+    display: none;
+  }
+  .tecnologia a {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .tecnologia-vantagens {
+    flex-direction: column;
+    /*   flex-direction: column; define que os itens q estão em flex sejam colocados em coluna fazendo uma quebra em 600px*/
+  }
+}
