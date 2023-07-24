@@ -1,0 +1,33 @@
+.vantagens-bg {
+  background: var(--cor-12);
+}
+
+.vantagens {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.vantagens h2 {
+  margin-bottom: 60px;
+}
+.vantagens ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+  /*O código acima indica q as colunas serão dispostas de acordo com a largura de exibição da tela neste caso tela grande 3colunas tela menor 2 colunas e tela pequena 1 coluna*/
+  gap: 40px 80px;
+}
+
+.vantagens h3,
+.vantagens img {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .vantagens {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .vantagens h2 {
+    margin-bottom: 40px;
+  }
+}

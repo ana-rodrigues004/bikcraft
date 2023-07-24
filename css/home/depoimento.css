@@ -12,7 +12,9 @@
 }
 .depoimento-conteudo {
   padding: 40px 40px 80px 80px;
-  align-self: flex-end;
+  align-self: end;
+  background: url(../../img/dec/bottom-right-p.svg) no-repeat bottom 40px right
+    40px;
 }
 
 .depoimento-conteudo p {
@@ -22,6 +24,7 @@
   font-style: italic;
   font-weight: 900;
   margin-bottom: 32px;
+  text-align: center;
 }
 .depoimento p::before {
   position: absolute;
@@ -37,7 +40,11 @@
   font-size: 5rem;
   color: var(--cor-p2);
 }
-
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+}
 @media (max-width: 800px) {
   .depoimento {
     grid-template-columns: 1fr;
